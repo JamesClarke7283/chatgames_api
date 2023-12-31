@@ -1,0 +1,5 @@
+# Setting for the interval in seconds between games.
+chatgames.new_game_interval (Interval Between Games) int 600
+
+# Setting for the amount of time players have to answer a question, in seconds.
+chatgames.time_to_complete (Time to Answer Question) int 20
