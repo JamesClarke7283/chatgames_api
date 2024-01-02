@@ -114,7 +114,7 @@ minetest.register_on_chat_message(function(player_name, message)
         local game = chatgames.games[chatgames.active_game.game_name]
         local question_data = game.questions[chatgames.active_game.question_id]
 
-        local player_response = question_data.is_case_sensitive and message or string.lower(message)
+        local player_response = question_data.is_case_sensitive and string.lower(message) or message
         local correct_answer = question_data.is_case_sensitive and question_data.answer or string.lower(question_data.answer) 
 
         if game.answer_func(chatgames.active_game.game_name, player_name, player_response, chatgames.active_game.time_to_complete, os.time() - chatgames.active_game.start_time, chatgames.active_game.question_id) then
