@@ -1,12 +1,7 @@
-# ChatGames
+# ChatGames API
 
 Inspired by the ChatGames plugin from minecraft.
-It adds chat messages to the game that ask for a response, if answered correctly then they get a reward.
-
-## Builtin Games
-- **Unscramble**: Unscramble words given to gain a reward.
-- **Unreverse**: Unreverse words given to gain a reward.
-- **Fillout**: Fill out the words exactly to gain a reward.
+It adds the ability to chat messages that ask for a response, if answered correctly then they get a reward.
 
 ## Commands
 Use `/chatgame toggle` to toggle visibility of the chat-game's to you.
@@ -45,3 +40,8 @@ end
 chatgames.register_game("Unscramble", example_answer_func)
 chatgames.register_question("Unscramble", "Unscramble the text 'Lpasi Lulzai'", "Lapis Lazuli", false)
 ```
+
+## License
+Licensed under the `GPLv3 or later` license
+[LICENSE FILE HERE](./LICENSE)
+Can be found in root of project.
