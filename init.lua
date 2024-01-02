@@ -44,15 +44,18 @@ end
 -- Function to register a question for a game
 function chatgames.register_question(game_name, question, answer, is_case_sensitive)
     if chatgames.games[game_name] then
+        local case_insensitive_answer = not is_case_sensitive and answer:lower() or answer
         table.insert(chatgames.games[game_name].questions, {
             question = question,
-            answer = is_case_sensitive and answer or string.lower(answer),
+            answer = case_insensitive_answer,
             is_case_sensitive = is_case_sensitive
         })
     else
         minetest.log("error", "[chatgames] Game " .. game_name .. " does not exist!")
     end
 end
+
+
 
 -- Function to start a game
 function chatgames.start_game(game_name)
